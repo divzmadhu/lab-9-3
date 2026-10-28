@@ -17,6 +17,12 @@ export default function App() {
     }
   ]);
 
+  const [filters, setFilters] = useState<{ status?: TaskStatus }>({});
+
+  const filteredTasks = tasks.filter((task) => {
+    return !filters.status || task.status === filters.status;
+  });
+
   // Function to update the task status
   function handleStatusChange(taskId: string, newStatus: TaskStatus) {
     setTasks((currentTasks) =>
@@ -38,11 +44,11 @@ export default function App() {
       <h1>Lab 3</h1>
       <h2>Lists, Keys, and Conditionals</h2>
       <h3>TaskList</h3>
-      <TaskFilter onFilterChange={(filters) => console.log(filters)} />
+      <TaskFilter onFilterChange={(newFilters) => setFilters(newFilters)} />
       <div className="tasklist-box">
 
         <TaskList
-          tasks={tasks}
+           tasks={filteredTasks}
           onStatusChange={handleStatusChange}
           onDelete={handleDelete}
         />
