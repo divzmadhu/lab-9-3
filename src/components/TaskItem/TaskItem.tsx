@@ -4,7 +4,11 @@ import type { TaskItemProps } from "../../types";
 export default function TaskItem(props: TaskItemProps) {
     return (
 
+
+        // <h2>Task Item</h2>
         <div className="task-item">
+
+
             <div className="task-header">
                 <p>Task {props.task.id}</p>
 
@@ -46,5 +50,6 @@ export default function TaskItem(props: TaskItemProps) {
 
 
         </div>
+
     );
 }

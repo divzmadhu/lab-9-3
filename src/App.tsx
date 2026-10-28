@@ -55,18 +55,23 @@ export default function App() {
     <div>
       <h1>Lab 3</h1>
       <h2>Lists, Keys, and Conditionals</h2>
-      <h3>TaskList</h3>
-      <TaskFilter onFilterChange={(newFilters) => setFilters(newFilters)} />
-      <div className="tasklist-box">
 
-        <TaskList
-          tasks={filteredTasks}
-          onStatusChange={handleStatusChange}
-          onDelete={handleDelete}
-        />
+      <div className="task-list">
+        <h3>Task List</h3>
+
+
+        <TaskFilter onFilterChange={(newFilters) => setFilters(newFilters)} />
+        <div className="tasklist-box">
+
+          <TaskList
+            tasks={filteredTasks}
+            onStatusChange={handleStatusChange}
+            onDelete={handleDelete}
+          />
+
+        </div>
 
       </div>
-
     </div>
   );
 }

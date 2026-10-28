@@ -1,3 +1,6 @@
+.task-filter,
+.task-list,
+/* .task-item, */
 .tasklist-box{
   border: 2px solid white;
   padding: 15px;
@@ -41,5 +44,18 @@ gap: 16px;
 .task-details p {
   margin: 0 0 12px 0;
   line-height: 1.5;
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-controls > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
