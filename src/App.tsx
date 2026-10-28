@@ -26,6 +26,12 @@ export default function App() {
       )
     );
   }
+
+  function handleDelete(taskId: string) {
+    setTasks((currentTasks) =>
+      currentTasks.filter((task) => task.id !== taskId)
+    );
+  }
   return (
     <div>
       <h1>Lab 3</h1>
@@ -36,7 +42,7 @@ export default function App() {
         <TaskList
           tasks={tasks}
           onStatusChange={handleStatusChange}
-          onDelete={() => { }}
+          onDelete={handleDelete}
         />
 
       </div>

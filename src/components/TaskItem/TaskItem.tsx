@@ -35,6 +35,15 @@ export default function TaskItem(props: TaskItemProps) {
                 <p>Due : {props.task.dueDate}</p>
             </div>
 
+            <div className="task-details">
+                <p>Priority: {props.task.priority}</p>
+                <p>Due : {props.task.dueDate}</p>
+            </div>
+
+            <button onClick={() => props.onDelete(props.task.id)}>
+                Delete
+            </button>
+
 
         </div>
     );
