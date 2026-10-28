@@ -6,8 +6,8 @@ export default function TaskItem(props: TaskItemProps) {
 
 
         // <h2>Task Item</h2>
-         <>
-        
+        <>
+
             <div className="task-item">
 
 
@@ -37,11 +37,19 @@ export default function TaskItem(props: TaskItemProps) {
                 <h2>{props.task.title}</h2>
                 <p>Description: {props.task.description}</p>
                 <div className="task-details">
-                    <p>Priority: {props.task.priority}</p>
+
+                    {/* Apply a CSS class based on the task's priority. */}
+                    <p className={`priority-${props.task.priority}`}>
+                        Priority: {props.task.priority}
+                    </p>
+
+                    {/* <p>Priority: {props.task.priority}</p> */}
                     <p>Due : {props.task.dueDate}</p>
                 </div>
 
-                <button onClick={() => props.onDelete(props.task.id)}>
+                {/* Style the delete button to stand out. */}
+                <button className="delete-button"
+                    onClick={() => props.onDelete(props.task.id)}>
                     Delete
                 </button>
 

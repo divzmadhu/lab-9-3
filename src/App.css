@@ -65,3 +65,19 @@ gap: 16px;
     gap: 8px;
 }
 
+/* Apply different text colors based on task priority. */
+
+.priority-low {
+    color: green;
+}
+
+.priority-medium {
+    color: orange;
+}
+
+.priority-high {
+    color: red;
+}
+
+/* Use red to distinguish the delete action. */ .delete-button { background-color: red; color: white; }
+
