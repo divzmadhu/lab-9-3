@@ -2,6 +2,15 @@ import './App.css';
 import TaskList from "./components/TaskList/TaskList";
 
 export default function App() {
+
+  const task = { 
+    id: "1", 
+    title: "Project Kickoff", 
+    description: "Project Manager: Conduct initial kickoff meeting with stakeholders and the assigned team to align on project objectives, scope, and deliverables.", 
+    status: "pending", 
+    priority: "high", 
+    dueDate: "2026-11-02" 
+  };
   return (
     <div>
       <h1>Lab 3</h1>
@@ -10,15 +19,11 @@ export default function App() {
       <div className="tasklist-box">
 
         <TaskList
-
-          id="T101"
-          title="Data Entry"
-          description="Input raw information, metrics, or records into a database or central spreadsheet."
-          status="In Progress"
-          priority="low"
-          dueDate="2026-11-15"
-
+          tasks = {[task]}
+          onStatusChange={() => {}}
+          onDelete={() => {}}
         />
+        
       </div>
 
     </div>
