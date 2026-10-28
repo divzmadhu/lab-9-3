@@ -4,7 +4,7 @@ export default function TaskFilter(props: TaskFilterProps) {
     return (
            
             <div className="task-filter">
-                 <h3>Filter Tasks</h3>
+                 {/* <h3>Filter Tasks</h3> */}
 
 
                 <div className="filter-controls">

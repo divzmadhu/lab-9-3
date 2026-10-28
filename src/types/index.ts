@@ -12,7 +12,9 @@ export interface Task {
 }
  
 export interface TaskListProps {
-  tasks: Task[];
+  tasks: Task[];  
+  // Total number of tasks before filtering, used to display the correct empty-state message.
+  totalTasks: number;  
   onStatusChange: (taskId: string, newStatus: TaskStatus) => void;
   onDelete: (taskId: string) => void;
 }

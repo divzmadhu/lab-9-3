@@ -1,7 +1,13 @@
-.task-filter,
-.task-list,
-/* .task-item, */
-.tasklist-box{
+
+h2 {
+  margin-bottom: 40px;
+}
+
+
+/* .task-filter, */
+/* .task-list, */
+/* .tasklist-box, */
+.task-item{
   border: 2px solid white;
   padding: 15px;
   margin: 15px 0;
