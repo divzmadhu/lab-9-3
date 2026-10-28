@@ -1,6 +1,7 @@
 import './App.css';
 import { useState } from "react";
 import TaskList from "./components/TaskList/TaskList";
+import TaskFilter from "./components/TaskFilter/TaskFilter";
 import type { Task, TaskStatus } from "./types";
 
 export default function App() {
@@ -37,6 +38,7 @@ export default function App() {
       <h1>Lab 3</h1>
       <h2>Lists, Keys, and Conditionals</h2>
       <h3>TaskList</h3>
+      <TaskFilter onFilterChange={(filters) => console.log(filters)} />
       <div className="tasklist-box">
 
         <TaskList
