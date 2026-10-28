@@ -17,10 +17,22 @@ export default function App() {
     }
   ]);
 
-  const [filters, setFilters] = useState<{ status?: TaskStatus }>({});
+  // const [filters, setFilters] = useState<{ status?: TaskStatus }>({});
+
+  const [filters, setFilters] = useState<{
+    status?: TaskStatus;
+    priority?: "low" | "medium" | "high";
+  }>({});
+
+  // const filteredTasks = tasks.filter((task) => {
+  //   return !filters.status || task.status === filters.status;
+  // });
 
   const filteredTasks = tasks.filter((task) => {
-    return !filters.status || task.status === filters.status;
+    return (
+      (!filters.status || task.status === filters.status) &&
+      (!filters.priority || task.priority === filters.priority)
+    );
   });
 
   // Function to update the task status
@@ -48,7 +60,7 @@ export default function App() {
       <div className="tasklist-box">
 
         <TaskList
-           tasks={filteredTasks}
+          tasks={filteredTasks}
           onStatusChange={handleStatusChange}
           onDelete={handleDelete}
         />
