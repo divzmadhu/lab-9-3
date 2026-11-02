@@ -1,10 +1,10 @@
 Lab 3
 Lists, Keys, and Conditionals
 
-### TaskFlow – Task Management App
+### WorkTrack– Task Management App
 ## Overview
 
-TaskFlow is a task management application built with React, TypeScript, and CSS. It allows users to view tasks, filter them by status and priority, update task statuses, and delete tasks.
+WorkTrack is a task management application built with React, TypeScript, and CSS. It allows users to view tasks, filter them by status and priority, update task statuses, and delete tasks.
 
 Features
 Display Tasks: Displays a list of tasks with their titles, descriptions, priorities, due dates, and statuses.
